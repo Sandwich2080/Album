@@ -7,7 +7,9 @@ This is a Android album demo implemented without any third-party libraries
 3. Image decoding and memory cache.
 
 # Latest Release
-Scan the QRCode below to install the release apk file.
+Scan the QRCode  below to install the release apk file.
+
+（Use browsers that support QRCode scanning）
 
 ![扫码下载](app/release/QRCode_app_release.png)
 
