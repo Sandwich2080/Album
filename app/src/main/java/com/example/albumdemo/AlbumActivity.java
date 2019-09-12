@@ -47,9 +47,7 @@ public class AlbumActivity extends AppCompatActivity {
 
         rvAlbum.setAdapter(adapter);
 
-
         startLoading();
-
 
     }
 
