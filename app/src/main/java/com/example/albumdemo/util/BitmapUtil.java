@@ -7,12 +7,21 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.ImageView;
 
+/**
+ * Tool class for image decoding
+ */
 public class BitmapUtil {
     private static final String TAG = BitmapUtil.class.getSimpleName();
 
     private BitmapUtil() {
     }
 
+    /**
+     * Decode a image according to the with and height of the ImageView
+     * @param filePath The path of the image
+     * @param imageView The ImageView
+     * @return
+     */
     public static Bitmap decode(String filePath, ImageView imageView) {
         BitmapFactory.Options opts = new BitmapFactory.Options();
         opts.inJustDecodeBounds = true;
@@ -43,6 +52,12 @@ public class BitmapUtil {
 
     }
 
+    /**
+     * Get thumbnail for video file
+     * @param c Application Context or Activity Context
+     * @param id id for the video
+     * @return
+     */
     public static Bitmap getVideoThumbnail(Context c, long id) {
         return MediaStore.Video.Thumbnails.getThumbnail(c.getContentResolver(), id, MediaStore.Video.Thumbnails.MICRO_KIND, null);
     }
