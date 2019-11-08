@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -49,6 +50,12 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumViewHolder> {
         holder.tvDate.setText(date);
         GridAdapter gridAdapter = new GridAdapter(ctx);
         holder.mediaGrid.setAdapter(gridAdapter);
+        holder.mediaGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
         gridAdapter.setFiles(mediaFiles);
     }
 
